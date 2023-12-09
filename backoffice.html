@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS - CellularStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body class="bg-info-subtle">
+
+    <nav class="navbar navbar-expand-lg bg-info">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/logo-cellularstore.png" alt="Bootstrap" width="100" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item text-end">
+                        <a class="nav-link active fs-5 text-white" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item text-end">
+                        <a class="nav-link fs-5 text-white" href="./backoffice.html"><strong>Backoffice</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="my-4 fw-bold display-6 text-center">Backoffice</h2>
+        <div class="row">
+            <div class="col-3">
+            </div>
+            <div class="col-6">
+                <form class="border-top border-2 border-primary" onsubmit="bSubmit()">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label mt-3"><strong>Nome</strong></label>
+                        <input type="text" class="form-control" id="nome" placeholder="Inserisci il nome del telefono"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descrizione" class="form-label"><strong>Descrizione</strong></label>
+                        <textarea type="text" class="form-control" id="descrizione"
+                            placeholder="Inserisci una breve descrizione del telefono" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="brand" class="form-label"><strong>Brand</strong></label>
+                        <input type="text" class="form-control" id="brand" placeholder="Inserisci il brand del telefono" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="imageUrl" class="form-label"><strong>Url Immagine</strong></label>
+                        <input type="text" class="form-control" id="imageUrl" placeholder="https://" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="prezzo" class="form-label"><strong>Prezzo</strong></label>
+                        <input type="number" class="form-control" id="prezzo" placeholder="100€" required>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary my-3">Crea Card Telefono</button>
+                        <button type="button" class="btn btn-secondary fw-bold my-3" onclick="reset()">Reset delle info</button>
+                        <button type="button" class="btn btn-danger fw-bold my-3" id="elimina" onclick="handleDelete()">Elimina Card Telefono</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./backoffice.js"></script>
+</body>
+
+</html>
